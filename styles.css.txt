@@ -1,0 +1,266 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50; /* Green */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+li {
+    margin-left: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF9800; /* Orange */
+}
+
+.search-bar {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 70%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #2196F3; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #1976D2;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2196F3; /* Blue */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.featured, .tools-list {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tool-card, .category {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.tool-card:hover, .category:hover {
+    transform: scale(1.02);
+}
+
+.tool-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #2196F3;
+    background-color: #f9f9f9;
+}
+
+.tool-item h4 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.policy-content, .about-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.adsense-placeholder {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.adsense-placeholder div {
+    border: 1px dashed #999;
+    padding: 10px;
+    color: #666;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 20px;
+    background-color: #FF9800; /* Orange */
+    color: white;
+    margin: 20px 0;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    color: #FF9800; /* Orange */
+}
+
+.social-share {
+    margin-top: 10px;
+}
+
+.share-btn {
+    background-color: #2196F3; /* Blue */
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.share-btn:hover {
+    background-color: #1976D2;
+}
+
+.contact-form {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        flex-direction: column;
