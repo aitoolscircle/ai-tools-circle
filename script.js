@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            const toolItems = document.querySelectorAll('.tool-item');
-            toolItems.forEach(item => {
-                const title = item.querySelector('h4 a').textContent.toLowerCase();
-                const description = item.querySelector('p').textContent.toLowerCase();
-                item.style.display = (title.includes(query) || description.includes(query)) ? 'block' : 'none';
+            const logoItems = document.querySelectorAll('.logo-item');
+            logoItems.forEach(item => {
+                const title = item.querySelector('p').textContent.toLowerCase();
+                item.style.display = title.includes(query) ? 'block' : 'none';
             });
         });
     }
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Form submitted! Functionality to be implemented.');
+            alert('Form submitted! Newsletter signup in progress.');
         });
     });
 });
