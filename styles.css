@@ -83,7 +83,7 @@ a:hover {
 
 .hero {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
     background-color: #2196F3; /* Blue */
     color: white;
     max-width: 1200px;
@@ -91,12 +91,12 @@ a:hover {
 }
 
 .hero h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .category-nav {
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .category-nav h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
@@ -129,7 +129,6 @@ a:hover {
     color: #2196F3; /* Blue */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1em;
 }
 
 .category-nav a:hover {
@@ -143,61 +142,95 @@ a:hover {
 }
 
 .tools-list h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .category {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 20px;
     margin: 20px 0;
-    width: 100%;
 }
 
 .category h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #4CAF50; /* Green */
+    text-align: center;
     margin-bottom: 15px;
 }
 
-.tool-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 4px solid #2196F3; /* Blue */
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    display: flex;
-    align-items: flex-start;
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
 }
 
-.tool-item img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    vertical-align: middle;
+.logo-item {
+    text-align: center;
 }
 
-.tool-item h4 {
-    font-size: 1.2em;
-    margin: 0 0 10px 0;
+.logo-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-.tool-item h4 a {
-    color: #2196F3; /* Blue */
-    text-decoration: none;
-    font-weight: bold;
+.logo-item img:hover {
+    transform: scale(1.1);
 }
 
-.tool-item h4 a:hover {
+.logo-item p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    color: #2196F3;
+}
+
+.logo-item p:hover {
     color: #FF9800; /* Orange */
 }
 
-.tool-item p {
+.tool-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tool-page img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.tool-page h1 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    text-align: center;
+}
+
+.tool-page p {
     font-size: 1em;
-    margin: 0;
+    margin: 15px 0;
+}
+
+.tool-page a.visit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196F3; /* Blue */
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.tool-page a.visit-btn:hover {
+    background-color: #1976D2;
 }
 
 .adsense-placeholder {
@@ -215,6 +248,22 @@ a:hover {
     color: #666;
 }
 
+.adsense-sidebar {
+    float: right;
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin: 0 0 20px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.adsense-sidebar div {
+    border: 1px dashed #999;
+    padding: 10px;
+    color: #666;
+}
+
 .newsletter {
     text-align: center;
     padding: 20px;
@@ -226,7 +275,7 @@ a:hover {
 }
 
 .newsletter h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
@@ -251,7 +300,6 @@ a:hover {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
-    font-size: 1em;
 }
 
 .newsletter button:hover {
@@ -269,10 +317,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9em;
-}
-
-.footer-links {
-    margin-top: 10px;
 }
 
 .footer-links a {
@@ -296,7 +340,6 @@ footer p {
     margin: 5px;
     border-radius: 4px;
     text-decoration: none;
-    font-size: 0.9em;
 }
 
 .share-btn:hover {
@@ -332,46 +375,18 @@ footer p {
         border-radius: 4px;
     }
 
-    .hero {
-        padding: 20px 10px;
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero h1 {
-        font-size: 1.5em;
+    .tool-page {
+        padding: 15px;
     }
 
-    .hero p {
-        font-size: 1em;
-    }
-
-    .category-nav ul {
-        flex-direction: column;
-    }
-
-    .category-nav li {
-        margin: 5px 0;
-    }
-
-    .tool-item {
-        flex-direction: column;
-    }
-
-    .tool-item img {
-        margin-bottom: 10px;
-    }
-
-    .newsletter form {
-        flex-direction: column;
-    }
-
-    .newsletter input {
+    .adsense-sidebar {
+        float: none;
         width: 100%;
-        border-radius: 4px;
-        margin-bottom: 10px;
-    }
-
-    .newsletter button {
-        border-radius: 4px;
+        margin: 20px auto;
     }
 }
 
@@ -380,23 +395,32 @@ footer p {
         font-size: 1.2em;
     }
 
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
     .category-nav h2 {
         font-size: 1.2em;
     }
 
     .tools-list h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .category h3 {
         font-size: 1.2em;
     }
 
-    .tool-item h4 {
-        font-size: 1.1em;
+    .logo-item p {
+        font-size: 0.8em;
     }
 
-    .tool-item p {
-        font-size: 0.9em;
+    .tool-page h1 {
+        font-size: 1.5em;
+    }
+
+    .tool-page img {
+        width: 80px;
+        height: 80px;
     }
 }
