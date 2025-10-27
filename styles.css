@@ -6,12 +6,16 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    min-height: 100vh; /* Ensures footer is pushed down with scroll */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: #4CAF50; /* Green */
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
 nav {
@@ -139,6 +143,7 @@ a:hover {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex: 1 0 auto; /* Ensures content pushes footer down */
 }
 
 .tools-list h2 {
@@ -174,6 +179,7 @@ a:hover {
     height: 60px;
     border-radius: 8px;
     transition: transform 0.3s;
+    object-fit: contain; /* Ensures logo fits without distortion */
 }
 
 .logo-item img:hover {
@@ -197,6 +203,7 @@ a:hover {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .tool-page img {
@@ -204,6 +211,7 @@ a:hover {
     height: 100px;
     display: block;
     margin: 0 auto 20px;
+    object-fit: contain;
 }
 
 .tool-page h1 {
@@ -311,7 +319,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: auto; /* Pushes footer to bottom */
 }
 
 footer p {
@@ -346,6 +354,51 @@ footer p {
     background-color: #1976D2;
 }
 
+.featured-tools {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-tools h2 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.featured-tools .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.featured-tools .logo-item {
+    text-align: center;
+}
+
+.featured-tools .logo-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    object-fit: contain;
+}
+
+.featured-tools .logo-item img:hover {
+    transform: scale(1.1);
+}
+
+.featured-tools .logo-item p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    color: #2196F3;
+}
+
+.featured-tools .logo-item p:hover {
+    color: #FF9800;
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -375,7 +428,7 @@ footer p {
         border-radius: 4px;
     }
 
-    .logo-grid {
+    .logo-grid, .featured-tools .logo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -403,7 +456,7 @@ footer p {
         font-size: 1.2em;
     }
 
-    .tools-list h2 {
+    .tools-list h2, .featured-tools h2 {
         font-size: 1.4em;
     }
 
@@ -411,7 +464,7 @@ footer p {
         font-size: 1.2em;
     }
 
-    .logo-item p {
+    .logo-item p, .featured-tools .logo-item p {
         font-size: 0.8em;
     }
 
