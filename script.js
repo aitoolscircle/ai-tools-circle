@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Search functionality for tools
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Form submissions
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
